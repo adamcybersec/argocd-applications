@@ -12,7 +12,7 @@ spec:
   project: default
   source:
     path: manifests
-    repoURL: https://github.com/adamroddick/node-express-mysql
+    repoURL: https://github.com/adamroddick/node-express-mysql.git
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
