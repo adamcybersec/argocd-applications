@@ -1,18 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: argocd-applications
-  namespace: argocd
+  name: node-express-mysql
+  namespace: express-ns
   # annotations:
   #     notifications.argoproj.io/subscribe.slack: channel-name
 spec:
   destination:
-    namespace: argocd
+    namespace: express-ns
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: personal-projects
-    repoURL: https://github.com/adamroddick/argocd-applications.git
+    path: manifests
+    repoURL: https://github.com/adamroddick/node-express-mysql.git
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
