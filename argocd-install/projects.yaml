@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: personal-projects
+  namespace: argocd
+spec:
+  description: Personal Projects
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  destinations:
+  - namespace: '*'
+    server: https://kubernetes.default.svc
+  - namespace: '*'
+    server: https://kubernetes.default.svc
+  orphanedResources:
+    warn: false
+  sourceRepos:
+  - '*'

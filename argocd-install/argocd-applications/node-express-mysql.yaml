@@ -2,12 +2,12 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: node-express-mysql
-  namespace: express-ns
+  namespace: argocd
   # annotations:
   #     notifications.argoproj.io/subscribe.slack: channel-name
 spec:
   destination:
-    namespace: express-ns
+    namespace: personal-projects
     server: https://kubernetes.default.svc
   project: default
   source:
